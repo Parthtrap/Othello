@@ -312,7 +312,7 @@ function checkFlips(X, Y, Mover) {
     document.getElementById("white-count").innerText =
         "White Count = " + numberOfWhite;
     document.getElementById("black-count").innerText =
-        "White Count = " + numberOfBlack;
+        "Black Count = " + numberOfBlack;
 
     // Check Winning Conditions
     if (numberOfBlack == 0) {
