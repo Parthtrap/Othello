@@ -46,7 +46,7 @@ boardUpdate();
 
 // variables for Click listener to the board
 let clickedX, clickedY;
-let turn = true;
+let turn = false;
 let clickedButtonID;
 const board = document.querySelector("#board");
 
@@ -308,23 +308,23 @@ function checkFlips(X, Y, Mover) {
 
     // Check Winning Conditions
     if (numberOfBlack == 0) {
-        document.getElementById("winner-declare").innerText = "White Wins";
+        document.getElementById("turn-teller").innerText = "White Wins";
         GameOver();
     }
 
     if (numberOfWhite == 0) {
-        document.getElementById("winner-declare").innerText = "Black Wins";
+        document.getElementById("turn-teller").innerText = "Black Wins";
         GameOver();
     }
     if (numberOfBlack + numberOfWhite == 64) {
         if (numberOfBlack > numberOfWhite) {
-            document.getElementById("winner-declare").innerText = "Black Wins";
+            document.getElementById("turn-teller").innerText = "Black Wins";
             GameOver();
         } else if (numberOfWhite > numberOfBlack) {
-            document.getElementById("winner-declare").innerText = "White Wins";
+            document.getElementById("turn-teller").innerText = "White Wins";
             GameOver();
         } else {
-            document.getElementById("winner-declare").innerText = "Its a Draw.";
+            document.getElementById("turn-teller").innerText = "Its a Draw.";
             GameOver();
         }
     }
