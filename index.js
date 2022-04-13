@@ -73,7 +73,11 @@ function moveWhite(X, Y) {
         (x - 1 >= 0 && boardArray[x - 1][y] == 2) ||
         (x + 1 <= 7 && boardArray[x + 1][y] == 2) ||
         (y - 1 >= 0 && boardArray[x][y - 1] == 2) ||
-        (y + 1 <= 7 && boardArray[x][y + 1] == 2)
+        (y + 1 <= 7 && boardArray[x][y + 1] == 2) ||
+        (y + 1 <= 7 && x + 1 <= 7 && boardArray[x + 1][y + 1] == 2) ||
+        (y - 1 >= 0 && x + 1 <= 7 && boardArray[x + 1][y - 1] == 2) ||
+        (y + 1 <= 7 && x - 1 >= 0 && boardArray[x - 1][y + 1] == 2) ||
+        (y - 1 >= 0 && x - 1 >= 0 && boardArray[x - 1][y - 1] == 2)
     ) {
         boardArray[x][y] = 1;
         turn = false;
@@ -91,7 +95,11 @@ function moveBlack(X, Y) {
         (x - 1 >= 0 && boardArray[x - 1][y] == 1) ||
         (x + 1 <= 7 && boardArray[x + 1][y] == 1) ||
         (y - 1 >= 0 && boardArray[x][y - 1] == 1) ||
-        (y + 1 <= 7 && boardArray[x][y + 1] == 1)
+        (y + 1 <= 7 && boardArray[x][y + 1] == 1) ||
+        (y + 1 <= 7 && x + 1 <= 7 && boardArray[x + 1][y + 1] == 1) ||
+        (y - 1 >= 0 && x + 1 <= 7 && boardArray[x + 1][y - 1] == 1) ||
+        (y + 1 <= 7 && x - 1 >= 0 && boardArray[x - 1][y + 1] == 1) ||
+        (y - 1 >= 0 && x - 1 >= 0 && boardArray[x - 1][y - 1] == 1)
     ) {
         boardArray[x][y] = 2;
         turn = true;
